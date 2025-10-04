@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt]{article}
+
+% -------------------------------
+% Pacchetti
+% -------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath, amssymb}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{booktabs}      % Tabelle più belle
+\usepackage{caption}       % Migliora le didascalie
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{colortbl}
+\definecolor{lightgray}{gray}{0.9}
+\usepackage{titlesec}
+
+\geometry{a4paper, top=3cm, bottom=3cm, left=3cm, right=3cm}
+
+% -------------------------------
+% Intestazioni e piè di pagina
+% -------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{Cognome Nome}}
+\fancyhead[C]{Classe X}
+\fancyhead[R]{\today}
+\fancyfoot[C]{\thepage}
+
+% -------------------------------
+% Stili dei titoli
+% -------------------------------
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+% -------------------------------
+% Didascalie
+% -------------------------------
+\captionsetup[table]{skip=5pt, labelfont=bf, font=small}
+\captionsetup[figure]{skip=5pt, labelfont=bf, font=small}
+
+% -------------------------------
+% Informazioni documento
+% -------------------------------
+\title{\textbf{\Huge Relazione di Laboratorio di Elettronica}}
+\author{Nome Cognome \\ Classe X}
+\date{\today}
+
+% -------------------------------
+% Documento
+% -------------------------------
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+% -------------------------------
+% Inclusione del contenuto
+% -------------------------------
+\input{contenuto.tex}
+\input{valutazione.tex}
+\end{document}
